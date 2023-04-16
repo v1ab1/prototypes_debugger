@@ -18,8 +18,8 @@ document.body.prepend(wrapper);
 
 button.addEventListener("click", () => {
   content.innerHTML = "";
-  const inputVal = input.value;
-  const element = window[inputVal] || document.querySelector(inputVal);
+  const inputValue = input.value;
+  const element = window[inputValue] || document.querySelector(inputValue);
   if (element) {
     showProtos(element);
   } else {
@@ -33,8 +33,10 @@ const showProtos = (element) => {
     const div = document.createElement("div");
     div.style.display = "flex";
     div.style.flexDirection = "column";
+
     const p = document.createElement("p");
     p.innerHTML = typeof proto.constructor === "function" ? proto.constructor.name : proto.constructor.constructor.name;
+
     const button = document.createElement("button");
     const protoToShow = proto;
     button.onclick = (() => {
@@ -42,9 +44,11 @@ const showProtos = (element) => {
     });
     button.innerHTML = "console.log it";
     button.style.width = "100px";
+
     div.appendChild(p);
     div.appendChild(button);
     content.appendChild(div);
+
     proto = Object.getPrototypeOf(proto); 
   }
 };
