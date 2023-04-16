@@ -10,11 +10,19 @@
     }
   </style>
   <script>
-    var func = () => {
-      var obj = new Map();
+    var animal = {
+      eats: true
     };
-    var arr = [];
-    var arr2 = [Map, arr];
+    function Animal(name) {
+      this.name = name;
+      this.__proto__ = animal;
+    }
+    var rabbit = new Animal("Кроль");
+    function LilRabbit(name) {
+      this.name = name;
+      this.__proto__ = Rabbit;
+    }
+    var lil = LilRabbit("Крольченок");
   </script>
 </head>
 <body>
