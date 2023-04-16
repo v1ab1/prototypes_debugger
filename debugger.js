@@ -1,7 +1,7 @@
 const wrapper = document.createElement("div");
 
 const input = document.createElement("input");
-input.placeholder = "querySelector";
+input.placeholder = "HTML/JS";
 input.type = "text";
 wrapper.appendChild(input);
 
