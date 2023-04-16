@@ -5,38 +5,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>debugger example</title>
   <style>
+    
+    body {
+      background-image: rgb(203, 197, 197);
+    }
+
+    p {
+      font-size: 22px;
+    }
+
     .image {
       width: 400px;
     }
+
+    img {
+      max-width: 600px;
+      margin: 10px;
+    }
+    
+    li {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .fit > img {
+      width: 300px;
+    }
+
   </style>
   <script>
+
+    var map = new Map();
+
+    var func = () => {
+      return 1
+    }
+    
     var animal = {
       eats: true
     };
+
     function Animal(name) {
       this.name = name;
       this.__proto__ = animal;
-    }
+    };
+
     var rabbit = new Animal("Кроль");
-    function LilRabbit(name) {
-      this.name = name;
-      this.__proto__ = Rabbit;
-    }
-    var lil = LilRabbit("Крольченок");
+
   </script>
 </head>
 <body>
   <div>
-    <h1>
-      Heading
+    <h1 class="selectors second">
+      Debugger presentation
     </h1>
     <p>
-      First Paragraph
+      The project was developed as part of the Advanced JavaScript Skillbox x UrFU IRIT-RTF course
     </p>
+    <h2>
+      How to use?
+    </h2>
     <p>
-      Second Paragraph
+      Just include my JS file at the very end of your html document
     </p>
-    <input placeholder="input" type="text" class="selectors second" />
+    <img src="./1.png" alt="how to use?" />
+    <h2>
+      Functions
+    </h2>
+    <ul>
+      <li>
+        <p>
+          1)The querySelector is used to find the element. You can write the name of a class or tag
+        </p>
+        <img src="./2.png" alt="h1" />
+        <img src="./3.png" alt="tag" />
+        <img src="./4.png" alt="single class" />
+      </li>
+      <li>
+        <p>
+          2)If you need to use 2 classes or more, then you can write it with a dot
+        </p>
+        <img src="./5.png" alt="double class" />
+      </li>
+      <li class="fit">
+        <p>
+          3)You can view any objects and variables in JavaScript, but you must use a declaration with var
+        </p>
+        <img src="./6.png" alt="js code" />
+        <img src="./7.png" alt="function" />
+        <img src="./8.png" alt="map" />
+        <img src="./9.png" alt="rabbit code" />
+        <img src="./10.png" alt="rabbit" />
+      </li>
+      <li class="fit">
+        <p>
+          4)You can view the contents of each stage by this button
+        </p>
+        <img src="./11.png" alt="console" />
+        <img src="./12.png" alt="object" />
+      </li>
+    </ul>
+    <h1>
+      Enjoy!
+    </h1>
   </div>
   <img class="image" src="https://sun9-78.userapi.com/impg/jPwYskPFaCO-KLE7xY-WB6j4a8wkpAVvU1jHHQ/4BymNtTZTGs.jpg?size=750x939&quality=95&sign=b0ed38c84350b41e41054568a35b92aa&type=album" alt="" />
 </body>
